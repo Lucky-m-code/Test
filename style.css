@@ -1,0 +1,221 @@
+body {
+    background-color: #e3edf7;
+    color:  #8a8a8a;
+    margin: 0;
+    font-size: 1em; /*this is 16px*/
+     
+}
+.column {
+    float: left;
+    width: 33.33%;  
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  /* tabbar horizonal flow */
+  .flex-container {
+    display: flex;
+    height: 90px;
+    /* background-color: DodgerBlue; */
+  }
+  
+  .flex-container > div {
+    background-color: #e3edf7;
+    border-radius: 15px;
+  
+    width: 100%;
+    padding: 20px;
+    font-size: 10px;
+    box-shadow: 0px 0px 2px 2px white;
+}
+
+td, th   {
+        /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+    
+  }
+  .table-margin{
+    margin-bottom: 30px;
+        
+      }
+  table{
+    width: 100%;
+    background-color: #e3edf7;  
+    border-spacing: 15px;
+        
+      }
+  th {
+width: 33.3%;
+
+    
+  }
+.flex-container-2nd  {
+    display: flex;
+    height: 94px;
+    background-color: DodgerBlue;
+  }
+
+  .flex-container-2nd > div {
+    background-color: #e3edf7;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px;
+    font-size: 10px;
+    /* box-shadow: 0px 0px 2px 2px white;    */
+}
+
+/* Icon Bar */
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #e3edf7;  /*Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+  .select-item a{
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width:33.33%; /* Equal width (4 icons with 25% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: #8a8a8a; /* White text color */
+    font-size: 15px; /* Increased font size */
+  }
+  .select-item-2nd div{
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width:50%; /* Equal width (4 icons with 25% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color:black; /* White text color */
+    font-size: 15px; /* Increased font size */
+  }
+  .select-item-2nd a{
+   
+    color:black; /* White text color */
+  }
+  .select-item-3rd a{
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width:50%; /* Equal width (4 icons with 25% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: #8a8a8a; /* White text color */
+    font-size: 15px; /* Increased font size */
+  }
+
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 25%; /* Equal width (4 icons with 25% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: #8a8a8a; /* White text color */
+    font-size: 20px; /* Increased font size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  .active {
+    color: #5e61bd; /* Add an active/current color */
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  .circle-wrap {
+    margin: 25px auto;
+    width: 150px;
+    height: 150px;
+    background: #fefcff;
+    border-radius: 50%;
+    border: 1px solid #cdcbd0;
+  }
+
+  .circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #227ded;
+}
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+  
+  .mask.full,
+  .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+  }
+  
+  @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+  } 
+
+  .circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #d2eaf1;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #1e51dc;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
